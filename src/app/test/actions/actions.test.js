@@ -1,5 +1,4 @@
-/* eslint no-unused-expressions: 0 */
-import { incrementIfOdd, increment, incrementAsync } from '../../actions/CounterActions';
+import { incrementIfOdd, increment, incrementAsync } from '../../actions/actions';
 import { spy, useFakeTimers } from 'sinon';
 import chai, { expect } from 'chai';
 import sinonChai from 'sinon-chai';

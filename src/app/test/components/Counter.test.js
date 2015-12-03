@@ -1,4 +1,3 @@
-/* eslint no-unused-expressions: 0 */
 import testdom from 'testdom';
 testdom('<html><body></body></html>');
 

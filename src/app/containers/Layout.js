@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react'
 
-class Layout extends React.Component {
+class Layout extends Component {
 
-  render() {
+  render () {
     return (
       <html lang='en'>
         <head>
@@ -19,8 +19,8 @@ class Layout extends React.Component {
           <script src='/app.js'></script>
         </body>
       </html>
-    );
+    )
   }
 }
 
-export default Layout;
+export default Layout
