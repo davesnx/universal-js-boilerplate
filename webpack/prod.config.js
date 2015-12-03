@@ -1,7 +1,6 @@
-import webpack from 'webpack';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-
-import baseConfig from './base.config';
+import webpack from 'webpack'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import baseConfig from './base.config'
 
 export default {
   ...baseConfig,
@@ -19,9 +18,9 @@ export default {
         exclude: /node_modules\/(?!font-awesome)/
       },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss'),
-        exclude: /node_modules/
+        test: /\.styl$/,
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap', 'stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'),
+        exclude: /node_modules\/(?!font-awesome)/
       }
     ]
   },
@@ -62,8 +61,6 @@ export default {
       output: {
         comments: false
       }
-    }),
-
-    ...baseConfig.plugins
+    })
   ]
-};
+}

@@ -1,22 +1,21 @@
-import path from 'path';
-
-const JS_REGEX = /\.js$|\.jsx$/;
+import path from 'path'
+const JS_REGEX = /\.js$|\.jsx$/
 
 export default {
   devtool: 'source-map',
   entry: {
-    app: path.resolve(ROOT_PATH, 'src/app/client.js')
+    app: path.resolve(__dirname, 'src/app/client.js')
   },
   output: {
-    path: path.resolve(ROOT_PATH, '../build/public'),
+    path: path.resolve(__dirname, '../build/public'),
     filename: '[name]-[hash].js',
     chunkFilename: '[name]-[hash].js',
     publicPath: '/build/public/assets/'
   },
   module: {
-    preLoaders: [
-      { test: JS_REGEX, exclude: /node_modules/, loader: 'eslint' }
-    ],
+    // preLoaders: [
+    //   { test: JS_REGEX, exclude: /node_modules/, loader: 'eslint' }
+    // ],
     loaders: [
       { test: /\.json$/, exclude: /node_modules/, loader: 'json' },
       { test: JS_REGEX, exclude: /node_modules/, loader: 'babel' },
@@ -25,7 +24,7 @@ export default {
   },
   plugins: [],
   resolve: {
-    extensions: ['', '.js', '.json', '.jsx', '.es6', '.babel'],
-    modulesDirectories: ['node_modules', 'app']
+    extensions: ['', '.js', '.json'],
+    modulesDirectories: ['node_modules', 'src']
   }
-};
+}

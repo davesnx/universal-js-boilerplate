@@ -7,11 +7,11 @@
   "version": "0.0.1",
   "description": "A boilerplate to start universal (isomorphic) web applications",
   "scripts": {
+    "lint": "standard | snazzy",
+    "start": "babel-node ./src/app/server.js",
     "build": "rm -rf build/public && babel-node ./node_modules/.bin/webpack --config ./webpack/prod.config.js",
-    "start": "babel-node ./srv/server.js",
     "test": "babel-node ./node_modules/.bin/karma start --single-run",
-    "test:watch": "babel-node ./node_modules/.bin/karma start",
-    "lint": "./node_modules/.bin/eslint"
+    "test:watch": "babel-node ./node_modules/.bin/karma start"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,9 @@
     "url": "https://github.com/carlosazaustre/universal-js-boilerplate/issues"
   },
   "homepage": "https://github.com/carlosazaustre/universal-js-boilerplate",
-  "dependencies": {},
+  "dependencies": {
+    "standard": "^5.4.1"
+  },
   "devDependencies": {
     "babel": "^5.8.21",
     "babel-core": "^5.8.3",
@@ -42,10 +44,6 @@
     "babel-plugin-react-transform": "^1.1.0",
     "babel-runtime": "^5.6.15",
     "css-loader": "^0.15.5",
-    "eslint": "^1.6.0",
-    "eslint-config-airbnb": "^0.1.0",
-    "eslint-loader": "^1.0.0",
-    "eslint-plugin-react": "^2.7.1",
     "esprima-fb": "^15001.1.0-dev-harmony-fb",
     "extract-text-webpack-plugin": "^0.8.2",
     "express": "^4.13.3",
