@@ -2,9 +2,9 @@ import React, { Component, PropTypes } from 'react'
 
 class Layout extends Component {
 
-  render () {
+  render() {
     return (
-      <html lang='en'>
+    <html lang='en'>
         <head>
           <meta charSet='utf-8' />
           <meta httpEquiv='x-ua-compatible' content='ie=edge' />

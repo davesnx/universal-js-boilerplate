@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/carlosazaustre/universal-js-boilerplate",
   "dependencies": {
+    "snazzy": "^2.0.1",
     "standard": "^5.4.1"
   },
   "devDependencies": {
@@ -87,6 +88,9 @@
   },
   "standard": {
     "parser": "babel-eslint",
+    "rules": {
+      "strict": 0
+    },
     "global": [
       "it",
       "describe",

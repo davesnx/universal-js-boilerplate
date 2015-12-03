@@ -4,6 +4,6 @@ const config = {
     port: process.env.PORT || 3000
   },
   api: 'http://localhost:3001'
-};
+}
 
-export default config;
+export default config
