@@ -88,10 +88,7 @@
   },
   "standard": {
     "parser": "babel-eslint",
-    "rules": {
-      "strict": 0
-    },
-    "global": [
+    "globals": [
       "it",
       "describe",
       "expect",
